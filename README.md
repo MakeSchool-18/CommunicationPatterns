@@ -6,7 +6,8 @@ In Object-Oriented Programming (OOP), we also want to think of communication in 
 
 This playground includes a demonstration of different communication patterns that are very common in iOS development. 
 
-The following patterns are illustrated:
+
+The following patterns are illustrated with minimal examples in this playground:
 
 ### One-To-One
 
