@@ -10,7 +10,7 @@ class Sender {
   
   weak var delegate: SenderDelegate?
   
-  func someMethod() {
+  func sendMessage() {
     delegate?.myMethod(a: 5)
   }
   
@@ -18,13 +18,21 @@ class Sender {
 
 class Receiver: SenderDelegate {
   
+  let sender = Sender()
+  
+  init() {
+    setup()
+  }
+  
+  func setup() {
+    sender.delegate = self
+  }
+  
   func myMethod(a: Int) {
     print(a)
   }
   
 }
 
-//let sender = Sender()
-//let receiver = Receiver()
-//sender.delegate = receiver
-//sender.someMethod()
+let receiver = Receiver()
+receiver.sender.sendMessage()

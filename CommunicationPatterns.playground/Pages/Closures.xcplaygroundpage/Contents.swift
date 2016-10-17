@@ -6,7 +6,7 @@ class Sender {
   
   var handler: ((Int) -> ())?
   
-  func someMethod() {
+  func sendMessage() {
     handler?(5)
   }
   
@@ -14,13 +14,21 @@ class Sender {
 
 class Receiver {
   
+  init() {
+    setup()
+  }
+  
+  let sender = Sender()
+  
   func myMethod(a: Int) {
     print(5)
   }
   
+  func setup() {
+    sender.handler = myMethod
+  }
+  
 }
 
-//let sender = Sender()
-//let receiver = Receiver()
-//sender.handler = receiver.myMethod
-//sender.someMethod()
+let receiver = Receiver()
+receiver.sender.sendMessage()

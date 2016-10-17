@@ -41,10 +41,10 @@ class Receiver {
   
 }
 
-//let receiver1 = Receiver()
-//let receiver2 = Receiver()
-//let receiver3 = Receiver()
-//let sender = Sender()
-//sender.send()
+let receiver1 = Receiver()
+let receiver2 = Receiver()
+let receiver3 = Receiver()
+let sender = Sender()
+sender.send()
 
 

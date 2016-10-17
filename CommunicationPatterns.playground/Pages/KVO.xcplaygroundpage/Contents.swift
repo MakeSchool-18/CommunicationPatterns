@@ -32,12 +32,13 @@ class Receiver: NSObject {
                              of object: Any?,
                              change: [NSKeyValueChangeKey : Any]?,
                              context: UnsafeMutableRawPointer?) {
+    print("notification received")
     if keyPath == #keyPath(Sender.myString) {
       let sender = object as! Sender
-      print(sender.myString)
+      print("new value: " + sender.myString)
     }
   }
 }
 
-//let receiver = Receiver()
-//receiver.sender.myString = "cde"
+let receiver = Receiver()
+receiver.sender.myString = "cde"
