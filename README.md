@@ -4,10 +4,7 @@ When talking about _communication_, we usually mean the _exchange of information
 
 In Object-Oriented Programming (OOP), we also want to think of communication in terms of sending and receiving messages. In this case, the _entities_ will be the _objects_ that exist in our program (so the instances of the classes that you write). But what about the messages? In OOP, messages are being sent through method calls! **An object `a` invoking a method on another object `b` can be said to send a message to this object. The _arguments_ that `a` passes into the method call are the _content_ or _payload_ of the message. In this context `a` can be seen as the _sender_ of the message, whereas `b` is the _receiver_.**
 
-This playground includes a demonstration of different communication patterns that are very common in iOS development. 
-
-
-The following patterns are illustrated with minimal examples in this playground:
+This playground includes a demonstration of different communication patterns that are very common in iOS development. The following patterns are illustrated with minimal examples in this playground:
 
 ### One-To-One
 
